@@ -1,3 +1,5 @@
+### This configuration is not implemented
+
 1. Install the ff:
     ###### code
       ` npm install --save node-sass-chokidar@1.2.2 npm-run-all@4.1.2 `
