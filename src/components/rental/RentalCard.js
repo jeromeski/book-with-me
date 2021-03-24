@@ -1,10 +1,9 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
-const RentalCard = () => {
-
+const RentalCard = (props) => {
 	return (
-		<div className='col-md-3 col-xs-6'>
+		<div className={props.colNum}>
 			<div className='card bwm-card'>
 				<img className='card-img-top' src='http://via.placeholder.com/350x250' alt=''></img>
 				<div className='card-block'>

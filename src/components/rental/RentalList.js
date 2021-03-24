@@ -8,20 +8,13 @@ class RentalList extends Component {
 			rentals: [1, 2, 3]
 		};
 		// I am binding the context of 'this' to this class of this function.
-		this.addRental = this.addRental.bind(this);
+		// this.addRental = this.addRental.bind(this);
 	}
 
 	renderRentals() {
-		return this.state.rentals.map((rental, idx) => <RentalCard key={idx} />);
-	}
-
-	addRental() {
-		// const rentals = this.state.rentals;
-		this.setState(({ rentals }, props) => {
-			console.log(rentals);
-			const increment = rentals.length + 1;
-			return { rentals: [...rentals, increment] };
-		});
+		return this.state.rentals.map((rental, idx) => (
+			<RentalCard key={idx} colNum={'col-md-3 col-xs-6'} />
+		));
 	}
 
 	render() {
@@ -30,7 +23,6 @@ class RentalList extends Component {
 			<section id='rentalListing'>
 				<h1 className='page-title'>Your Home All Around the World</h1>
 				<div className='row'>{this.renderRentals()}</div>
-				<button onClick={this.addRental}>Add Rental</button>
 			</section>
 		);
 	}
