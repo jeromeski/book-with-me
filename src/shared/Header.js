@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 import sprites from '../assets/img/sprite.svg';
 
 const Header = () => {
+	console.count('Header :');
 	return (
 		<nav className='navbar navbar-dark navbar-expand-lg'>
 			<div className='container'>
@@ -43,7 +45,6 @@ const Header = () => {
 			</div>
 		</nav>
 	);
-
 };
 
 export default Header;

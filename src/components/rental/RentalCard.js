@@ -1,6 +1,8 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react';
 
 const RentalCard = () => {
+
 	return (
 		<div className='col-md-3 col-xs-6'>
 			<div className='card bwm-card'>
