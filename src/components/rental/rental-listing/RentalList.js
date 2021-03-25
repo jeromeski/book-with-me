@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import RentalCard from './RentalCard';
+import * as actions from '../../../actions';
 
 class RentalList extends Component {
 	constructor() {
@@ -8,6 +9,10 @@ class RentalList extends Component {
 		this.state = {};
 		// I am binding the context of 'this' to this class of this function.
 		// this.addRental = this.addRental.bind(this);
+	}
+
+	componentDidMount() {
+		this.props.dispatch(actions.fetchRentals());
 	}
 
 	renderRentals() {
@@ -28,8 +33,9 @@ class RentalList extends Component {
 }
 
 const mapStateToProps = (state) => {
+	console.log('rentals', state);
 	return {
-		rentals: state.rentals
+		rentals: state.rentals.data
 	};
 };
 

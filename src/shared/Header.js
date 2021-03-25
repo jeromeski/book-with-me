@@ -7,11 +7,10 @@ import { NavLink } from 'react-router-dom';
 import sprites from '../assets/img/sprite.svg';
 
 const Header = () => {
-	console.count('Header :');
 	return (
 		<Navbar as='nav' expand='lg' className='navbar-dark'>
 			<Container>
-				<NavbarBrand as={NavLink} to='/'>
+				<NavbarBrand as={NavLink} to='/rentals'>
 					BookWithMe
 				</NavbarBrand>
 				<Form inline className='my-2 my-lg-0'>
@@ -28,8 +27,12 @@ const Header = () => {
 				<NavbarToggle aria-controls='navbarNavAltMarkup'></NavbarToggle>
 				<NavbarCollapse id='navbarNavAltMarkup'>
 					<div className='navbar-nav ml-auto'>
-						<Nav.Link as={NavLink} to='/login' >Login</Nav.Link>
-						<Nav.Link as={NavLink} to='/register'>Register</Nav.Link>
+						<Nav.Link as={NavLink} to='/login'>
+							Login
+						</Nav.Link>
+						<Nav.Link as={NavLink} to='/register'>
+							Register
+						</Nav.Link>
 					</div>
 				</NavbarCollapse>
 			</Container>
